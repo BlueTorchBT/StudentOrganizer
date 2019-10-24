@@ -3,8 +3,14 @@ package com.example.studentorganizercec;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         private int month;
         private int day;
         private int cycle;
+
+
+        public CECdate(){
+            this(1999, 9, 5, 1);
+        }
 
         public CECdate(int y, int m, int d, int c){
             setYear(y);
@@ -37,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     public void populatececDates(){
         // these dates were extracted from our school/provincial calendar
         // I used data collected by a fellow teacher, Mathieu Trembley
+        addcecDates(new CECdate(2019,10,23,1));
+        addcecDates(new CECdate(2019,10,24,2));
         addcecDates(new CECdate(2019,10,28,3));
         addcecDates(new CECdate(2019,10,29,4));
         addcecDates(new CECdate(2019,10,30,5));
@@ -106,5 +119,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final TextView tv = findViewById(R.id.main_activity_tv_cycleday);
+
+        Date date = new Date();
+        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+        int year  = localDate.getYear();
+        int month = localDate.getMonthValue();
+        int day   = localDate.getDayOfMonth();
+        String ttt = Integer.toString(year) + Integer.toString(month) + Integer.toString(day);
+        Toast.makeText(getApplicationContext(), ttt,
+                Toast.LENGTH_LONG).show();
+
+        int cycle = 0;
+        for (CECdate cec : cecDates) {
+            if(year == cec.getYear() && month == cec.getMonth() && day == cec.getDay()){
+                cycle = cec.getCycle();
+            }
+        }
+
+
+        tv.setText(Integer.toString(cycle));
     }
 }
