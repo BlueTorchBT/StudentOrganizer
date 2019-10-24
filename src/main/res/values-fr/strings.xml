@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StudentOrganizerCEC</string>
+    <string name="main_next_class">Your next class is</string>
+</resources>
