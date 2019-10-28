@@ -2,11 +2,13 @@ package com.example.studentorganizercec;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.time.LocalDate;
+import java.io.File;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,34 +17,17 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    String fileName = "schedule";
     private List<CECdate> cecDates = new ArrayList<CECdate>(10);
 
-    public class CECdate {
-        private int year;
-        private int month;
-        private int day;
-        private int cycle;
+    public int nextCycle(int c){
+        if(c==8) return 1;
+        return c + 1;
+    }
 
-
-        public CECdate(){
-            this(1999, 9, 5, 1);
-        }
-
-        public CECdate(int y, int m, int d, int c){
-            setYear(y);
-            setMonth(m);
-            setDay(d);
-            setCycle(c);
-        }
-
-        int getYear(){ return year; }
-        int getMonth(){ return month; }
-        int getDay(){ return day; }
-        int getCycle(){ return cycle; }
-        void setYear(int year){ this.year = year; }
-        void setMonth(int month){ this.month = month; }
-        void setDay(int day){ this.day = day; }
-        void setCycle(int cycle){ this.cycle = cycle; }
+    public int prevCycle(int c){
+        if(c==1) return 8;
+        return c - 1;
     }
 
     public void populatececDates(){
@@ -115,18 +100,27 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        populatececDates();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*
+        File aFile = new File( fileName);
+        if(!aFile.exists() ){ // if false, the file does not exists!
+            Intent intentChooseSchedType = new Intent(this, ChooseScheduleTypeActivity.class);
+            startActivity(intentChooseSchedType);
+        }
+*/
+        populatececDates();
         final TextView tv = findViewById(R.id.main_activity_tv_cycleday);
 
         Date date = new Date();
-        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDateTime local = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 
-        int year  = localDate.getYear();
-        int month = localDate.getMonthValue();
-        int day   = localDate.getDayOfMonth();
+        int year  = local.getYear();
+        int month = local.getMonthValue();
+        int day   = local.getDayOfMonth();
+        int hour = local.getHour();
+        int minute = local.getMinute();
+
         String ttt = Integer.toString(year) + Integer.toString(month) + Integer.toString(day);
         Toast.makeText(getApplicationContext(), ttt,
                 Toast.LENGTH_LONG).show();
@@ -138,7 +132,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        if(hour >= 15){
+            tv.setText(Integer.toString(nextCycle(cycle)));
+        } else {
+            tv.setText(Integer.toString(cycle));
+        }
 
-        tv.setText(Integer.toString(cycle));
     }
 }
