@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_enter_schedule_4_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toLeftOf="parent"
+    tools:context=".EnterSchedule4Activity">
+
+    <TextView
+        android:id="@+id/enter_schedule_4_activity_tv_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:text="@string/enter_schedule_4_activity_tv_A"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_tv_B"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_4_activity_et_A"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enter_schedule_4_activity_tv_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_schedule_4_activity_tv_B"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_tv_C"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_4_activity_et_B"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_tv_A" />
+
+    <TextView
+        android:id="@+id/enter_schedule_4_activity_tv_C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_schedule_4_activity_tv_C"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_tv_D"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_4_activity_et_C"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_tv_B" />
+
+    <TextView
+        android:id="@+id/enter_schedule_4_activity_tv_D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_schedule_4_activity_tv_D"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_4_activity_et_D"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_tv_C" />
+
+    <EditText
+        android:id="@+id/enter_schedule_4_activity_et_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_et_B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_4_activity_tv_A"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enter_schedule_4_activity_et_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_schedule_4_activity_tv_B"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_et_C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_4_activity_tv_B"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_et_A" />
+
+    <EditText
+        android:id="@+id/enter_schedule_4_activity_et_C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_schedule_4_activity_tv_C"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_et_D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_4_activity_tv_C"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_et_B" />
+
+    <EditText
+        android:id="@+id/enter_schedule_4_activity_et_D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_4_activity_tv_D"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_et_C" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_tv_D"
+        tools:layout_editor_absoluteX="164dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

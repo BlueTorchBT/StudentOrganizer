@@ -102,13 +102,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-/*
+
         File aFile = new File( fileName);
         if(!aFile.exists() ){ // if false, the file does not exists!
             Intent intentChooseSchedType = new Intent(this, ChooseScheduleTypeActivity.class);
             startActivity(intentChooseSchedType);
         }
-*/
+
         populatececDates();
         final TextView tv = findViewById(R.id.main_activity_tv_cycleday);
 

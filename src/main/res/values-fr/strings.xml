@@ -2,4 +2,10 @@
 <resources>
     <string name="app_name">StudentOrganizerCEC</string>
     <string name="main_next_class">Your next class is</string>
+    <string name="choose_schedule_type_btn_4">4-day Schedule</string>
+    <string name="choose_schedule_type_btn_8">8-day Schedule</string>
+    <string name="enter_schedule_4_activity_tv_A">A-Block</string>
+    <string name="enter_schedule_4_activity_tv_B">B-Block</string>
+    <string name="enter_schedule_4_activity_tv_C">C-Block</string>
+    <string name="enter_schedule_4_activity_tv_D">D-Block</string>
 </resources>
