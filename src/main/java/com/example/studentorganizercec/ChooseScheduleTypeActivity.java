@@ -25,7 +25,7 @@ public class ChooseScheduleTypeActivity extends AppCompatActivity {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentEnterSchedule4 = new Intent(getApplicationContext(), EnterSchedule4Activity.class);
+                Intent intentEnterSchedule4 = new Intent(getApplicationContext(), AddCourseActivity.class);
                 startActivity(intentEnterSchedule4);
             }
         });

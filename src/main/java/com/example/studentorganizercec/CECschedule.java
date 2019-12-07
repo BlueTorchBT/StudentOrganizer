@@ -1,8 +1,13 @@
 package com.example.studentorganizercec;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CECschedule {
 
     private int cycle;
+
+    private List<String> courses = new ArrayList<String>(4);
     private String p1room;
     private String p1subject;
     private String p2room;

@@ -1,19 +1,25 @@
 package com.example.studentorganizercec;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     public int prevCycle(int c){
         if(c==1) return 8;
         return c - 1;
+    }
+
+    public void addcecDates(CECdate c) {
+        this.cecDates.add(c);
     }
 
     public void populatececDates(){
@@ -94,20 +104,51 @@ public class MainActivity extends AppCompatActivity {
         addcecDates(new CECdate(2020,1,30,3));
     }
 
-    public void addcecDates(CECdate c) {
-        this.cecDates.add(c);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the Toolbar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_main_actions, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem mi) {
+        int id = mi.getItemId();
+        switch(id) {
+            case R.id.action_1_schedule:
+                Log.d("Toolbar", "Option 1");
+                break;
+            case R.id.action_2_course_list:
+                Intent intent_class_list = new Intent(this, ClassListActivity.class);
+                startActivity(intent_class_list);
+                break;
+            case R.id.action_3_add_course:
+                Intent intent_add_course = new Intent(this, AddCourseActivity.class);
+                startActivity(intent_add_course);
+                break;
+            case R.id.action_about:
+                Toast.makeText(this, "Curt Crane",
+                        Toast.LENGTH_LONG).show();
+
+        }
+        return true ;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
+        setSupportActionBar(myToolbar);
 
-        File aFile = new File( fileName);
+
+
+        File aFile = new File(getFilesDir(), fileName);
         if(!aFile.exists() ){ // if false, the file does not exists!
-            Intent intentChooseSchedType = new Intent(this, ChooseScheduleTypeActivity.class);
-            startActivity(intentChooseSchedType);
+            Intent intentAddCourse= new Intent(this, AddCourseActivity.class);
+            startActivity(intentAddCourse);
         }
+
 
         populatececDates();
         final TextView tv = findViewById(R.id.main_activity_tv_cycleday);

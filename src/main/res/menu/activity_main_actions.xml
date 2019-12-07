@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_1_schedule"
+        android:icon="@drawable/ic_schedule"
+        android:orderInCategory="101"
+        android:title="@string/action_1_schedule_text"
+        android:tooltipText="@string/action_1_schedule_text"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_2_course_list"
+        android:icon="@drawable/ic_course_list"
+        android:orderInCategory="102"
+        android:title="@string/action_2_course_list_text"
+        android:tooltipText="@string/action_2_course_list_text"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_3_add_course"
+        android:icon="@drawable/ic_add_course"
+        android:orderInCategory="103"
+        android:title="@string/action_3_add_course_text"
+        android:tooltipText="@string/action_3_add_course_text"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="105"
+        android:title="@string/action_about"
+        android:tooltipText="@string/action_about"
+        app:showAsAction="never" />
+</menu>

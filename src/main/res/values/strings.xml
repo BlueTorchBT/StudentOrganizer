@@ -1,10 +1,43 @@
 <resources>
-    <string name="app_name">StudentOrganizerCEC</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="app_name">CEC Schedule</string>
     <string name="main_next_class">Your next class is</string>
     <string name="choose_schedule_type_btn_4">4-day Schedule</string>
     <string name="choose_schedule_type_btn_8">8-day Schedule</string>
-    <string name="enter_schedule_4_activity_tv_A">A-Block</string>
-    <string name="enter_schedule_4_activity_tv_B">B-Block</string>
-    <string name="enter_schedule_4_activity_tv_C">C-Block</string>
-    <string name="enter_schedule_4_activity_tv_D">D-Block</string>
+
+    <string name="enter_schedule_activity_tv_add">Add a Course!</string>
+    <string name="enter_schedule_activity_tv_course">Course Name</string>
+    <string name="enter_schedule_activity_tv_teacher">Teacher</string>
+    <string name="enter_schedule_activity_tv_room">Room</string>
+    <string name="enter_schedule_activity_et_course">Course Name</string>
+    <string name="enter_schedule_activity_et_teacher">Teacher</string>
+    <string name="enter_schedule_activity_et_room">Room</string>
+    <string name="enter_schedule_activity_tv_block">Block</string>
+    <string name="enter_schedule_activity_btn">Add This Course</string>
+
+    <string name="enter_schedule_blank_teacher">ERROR: You did not enter a teacher!</string>
+    <string name="enter_schedule_blank_course">ERROR: You did not enter a course!</string>
+    <string name="enter_schedule_blank_room">ERROR: You did not enter a room!</string>
+    <string name="enter_schedule_commas">ERROR: Commas are not allowed in the course name!</string>
+    <string name="add_course_activity_cancelled">Course was NOT added!</string>
+    <string name="enter_schedule_success_add">Course successfully added!</string>
+    <string name="add_course_activity_confirm">Are you certain you would like to add the following course to your schedule?</string>
+
+
+    <string-array name="enter_schedule_activity_spn_blocks">
+        <item>A-Block</item>
+        <item>B-Block</item>
+        <item>C-Block</item>
+        <item>D-Block</item>
+    </string-array>
+
+    <string name="credits_1">Icons courtesy of https://icon-library.net/</string>
+
+    <string name="action_1_schedule_text">View my Schedule</string>
+    <string name="action_2_course_list_text">View my Courses</string>
+    <string name="action_3_add_course_text">Add a New Course</string>
+    <string name="action_about">About</string>
+
 </resources>

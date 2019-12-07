@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_enter_schedule_4_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toLeftOf="parent"
+    tools:context=".AddCourseActivity">
+
+    <TextView
+        android:id="@+id/enter_schedule_activity_tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:text="@string/enter_schedule_activity_tv_add"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_activity_et_course"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enter_schedule_activity_tv_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:text="@string/enter_schedule_activity_tv_course"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enter_schedule_activity_et_course"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_activity_et_course"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/enter_schedule_activity_tv_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_schedule_activity_tv_teacher"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enter_schedule_activity_et_teacher"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_activity_et_teacher"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/enter_schedule_activity_tv_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_schedule_activity_tv_room"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enter_schedule_activity_et_room"
+        app:layout_constraintEnd_toStartOf="@+id/enter_schedule_activity_et_room"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/enter_schedule_activity_et_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/enter_schedule_activity_et_course"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_schedule_activity_et_course"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_activity_et_teacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_activity_tv_course"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_activity_tv_add" />
+
+    <EditText
+        android:id="@+id/enter_schedule_activity_et_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_schedule_activity_et_teacher"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_activity_et_room"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_activity_tv_teacher"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_activity_et_course" />
+
+    <EditText
+        android:id="@+id/enter_schedule_activity_et_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_schedule_activity_et_room"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_4_activity_spn_block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enter_schedule_activity_tv_room"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_activity_et_teacher" />
+
+    <Button
+        android:id="@+id/enter_schedule_activity_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_schedule_activity_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_4_activity_spn_block" />
+
+    <Spinner
+        android:id="@+id/enter_schedule_4_activity_spn_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/enter_schedule_activity_spn_blocks"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule_activity_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_schedule_activity_et_room" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
